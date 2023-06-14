@@ -24,7 +24,7 @@ export default function Column({
                     isLast={isLast}
                     handleShift ={handleShift}
                     index ={i}
-                    colindex = {index}
+                    colIndex = {index}
                 />
             ))
             }

@@ -1,7 +1,9 @@
 //import logo from './logo.svg';/
 import './App.css';
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Column from './Column';
 import React from 'react';
+
 
 const initialState =[
   {
@@ -84,6 +86,8 @@ function App() {
       ))}
       
     </div>
+  
+
   );
 }
 
