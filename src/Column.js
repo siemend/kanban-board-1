@@ -28,7 +28,7 @@ export default function Column({
                 />
             ))
             }
-            <div class ="taskButton">
+            <div className ="taskButton">
                 <input
                 
                 onChange={(e) => handleInputChange(e.target.value, index) }
