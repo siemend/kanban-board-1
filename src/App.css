@@ -7,8 +7,8 @@ header {
     background-image: url(../public/background_header.jpg);
     background-size: 100% auto;
     height: 50px;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     font-size: large;
     font-family: auto;
@@ -16,25 +16,38 @@ header {
 
 @media (max-width: 800px) {
     header {
-      
+        font-size: small;
       }
       .App {
         flex-direction: column;
         height: auto;
-        
+        margin-top: 50px !important;
       }
       .col {
         padding-bottom: 30px;
         flex: 100%;
       }
-  }
+    footer {
+        font-size: medium !important;
+    }
+}
+
+.buttonLogIn {
+    border: none;
+    image-orientation: none;
+    padding: 12px 12px;
+    font-family: auto;
+    font-size: medium;
+    border-radius: 45%;
+    cursor: pointer;
+}
 
 footer {
     background-image: url(../public/background_footer.jpg);
     background-size: 100% auto;
     height: 50px;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     font-size: large;
     font-family: auto;
@@ -43,6 +56,8 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 10;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .App {
@@ -79,10 +94,18 @@ footer {
    
 
 }
+
+.taskButton {
+    display: flex;
+    justify-content: space-between;
+}
+
 button {
     border-radius: 10%;
     border: none;
+    cursor: grab;
 }
+
 .col button, 
 .col input {
     padding: 8px 16px;

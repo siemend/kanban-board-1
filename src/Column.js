@@ -28,13 +28,15 @@ export default function Column({
                 />
             ))
             }
-            <input
-            
-            onChange={(e) => handleInputChange(e.target.value, index) }
-            value = {data.input}
-            
-            placeholder='Describe the task'/>
-            <button onClick={() => handleAddTodo(index)}>+ Add card</button>
+            <div class ="taskButton">
+                <input
+                
+                onChange={(e) => handleInputChange(e.target.value, index) }
+                value = {data.input}
+                
+                placeholder='Describe the task'/>
+                <button onClick={() => handleAddTodo(index)}>+ Add card</button>
+            </div>
         </div>
          
          //console.log(todos);

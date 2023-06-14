@@ -9,7 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./favicon1.ico" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -27,9 +27,32 @@
     <title>Awesome Kanban Board</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="text/javascript">
+      function Input(){
+      login_ok = false;
+      user_name = "";
+      password = "";
+      user_name = prompt("Your username (login):","");
+      user_name = user_name.toLowerCase();
+      password = prompt("Your password","");
+      password = password.toLowerCase();
+      if (user_name=="semion" && password=="demidov") {
+       login_ok = true;
+       window.location = "index.html";
+      }
+      
+      if (login_ok==false) alert("You have enterded an incorrect username (login) or password!");
+      if (login_ok==null) alert("Please enter some information about you!");
+      }
+      </script>
+
     <header>
-      Awesome Kanban Board
+      <h1>Awsome Kanban Board</h1>
+      <div align="center">
+        <form>
+         <input type="button" class="buttonLogIn" value="Log in" onClick="Input()">
+        </form>
+       </div>
     </header>
     <div id="root"></div>
     <!--
@@ -43,7 +66,21 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <footer>
-      Kanban board by ME
+      <p>Kanban board by ME</p>
+      <div class="date">
+      <script language="javascript" type="text/javascript">
+          let d = new Date();
+
+          let day=new Array("Sun","Mon","Thue",
+          "Wed","Thur","Fri","Sat");
+
+          let month=new Array("Jan","Feb","Mar","Apr","May","Jun",
+          "Jul","Aug","Sep","Oct","Nov","Dec");
+
+          document.write(day[d.getDay()]+" " +" | " +d.getDate()+ " " + month[d.getMonth()]
+          + " " + d.getFullYear() + " YEAR");
+      </script>
+      </div>
     </footer>
   </body>
 </html>
